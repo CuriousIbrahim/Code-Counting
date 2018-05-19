@@ -37,3 +37,16 @@ def count_lines_of_code(file):
     return count
 
 
+def main(root):
+    start = time.time()
+
+    explore_folder(root)
+
+    total = 0
+
+    for f in files:
+        total += count_lines_of_code(f)
+
+    print('There are {} lines of code in {} files. This took {} to process'.format(
+        total, len(files), time.time() - start
+    ))
