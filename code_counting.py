@@ -1,7 +1,9 @@
 import os
+import time
 
 FILE_EXTENSIONS = ['.java', '.py', '.c', '.cpp', '.h', '.js']
 
+files = []
 
 def check_if_file_is_of_extension(file):
 
@@ -13,8 +15,6 @@ def check_if_file_is_of_extension(file):
 
 
 def explore_folder(root):
-
-    files = []
 
     if not os.path.isdir(root) and check_if_file_is_of_extension(root):
         files.append(root)
@@ -35,3 +35,5 @@ def count_lines_of_code(file):
             count += 1
 
     return count
+
+
