@@ -1,9 +1,11 @@
 import os
 import time
+import sys
 
 FILE_EXTENSIONS = ['.java', '.py', '.c', '.cpp', '.h', '.js']
 
 files = []
+
 
 def check_if_file_is_of_extension(file):
 
@@ -50,3 +52,8 @@ def main(root):
     print('There are {} lines of code in {} files. This took {} to process'.format(
         total, len(files), time.time() - start
     ))
+
+
+if __name__ == '__main__':
+    root = sys.argv[1]
+    main(root)
