@@ -5,11 +5,14 @@ Language class, contains name of language as well as the language's extension. E
 """
 
 class Language:
-    name = ''
-    extension = []
 
-    def __init__(self, name, extension):
+    def __init__(self, name, extension):       # extension has to be a list
         self.name = name
+
+        for index, ext in enumerate(extension):
+            if '.' not in ext:
+                extension[index] = '.' + ext
+
         self.extension = extension
 
     def __str__(self):
@@ -50,6 +53,5 @@ def get_languages():
             languages.append(Language(data[0], data[1]))
 
     return languages
-
 
 
