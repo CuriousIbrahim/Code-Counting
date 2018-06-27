@@ -1,0 +1,8 @@
+NAME;EXTENSIONS (DON'T INCLUDE PERIOD)
+Java;java
+Python;py
+C/C++;c,cpp,h,cp
+Javascript;js
+HTML;html
+CSS;css
+C#;cp
