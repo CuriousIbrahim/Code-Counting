@@ -12,4 +12,10 @@ class Language:
         self.name = name
         self.extension = extension
 
+    def __str__(self):
+        return 'NAME: {} EXTENSION: {}'.format(self.name, self.extension)
+
+
+
+
 
