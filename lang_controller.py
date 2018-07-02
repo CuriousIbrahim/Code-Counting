@@ -1,19 +1,31 @@
 from language import Language, get_languages
+from util import get_file_extension, count_lines_of_code
 
 
 class LanguagesController:
 
     def __init__(self):
         self.languages = get_languages()
+        self.used = {}
 
-    """If the file is of an extension (ex: .java, .py) then return the Language object for that extension; if the file 
-    is not of any extension, then return None"""
+    """If the file is of an extension (ex: .java, .py), it will add it to the a seperate dictionary and start counting 
+    its lines"""
 
-    @staticmethod
-    def check_file_is_of_extension(self, file):
-        for lang in self.languages:
-            for ext in lang.extension:
-                if ext in file:
-                    return lang
+    def check(self, file):
 
-        return None
+        ext = get_file_extension(file)
+
+        if ext in self.used:
+            self._add_file_and_count_lines(file, ext)
+        elif ext in self.languages:
+
+            lang = self.languages[ext]
+
+            self.used[ext] = lang
+
+            self._add_file_and_count_lines(file, ext)
+
+    def _add_file_and_count_lines(self, file, ext):
+        count = count_lines_of_code(file)
+        self.used[ext].add_lines(count)
+        self.used[ext].add_file()
