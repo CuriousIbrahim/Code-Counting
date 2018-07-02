@@ -25,7 +25,8 @@ def main(root):
     logging.info('Constructing LanguageController object')
     controller = LanguagesController()
     logging.info('Successfully constructed LanguageController object')
-    # start = time.time()
+
+    start = time.time()
 
     logging.info('Exploring', root, ':')
     explore_folder(root)
@@ -35,6 +36,8 @@ def main(root):
         controller.check(f)
 
     print(controller.results())
+
+    print('Time to process: {} seconds'.format(str(time.time() - start)))
 
 
 if __name__ == '__main__':
