@@ -22,7 +22,7 @@ class Language:
         return 'NAME: {} EXTENSION: {}'.format(self.name, self.extension)
 
     def add_file(self):
-        self.file += 1
+        self.files += 1
 
     def add_lines(self, lines):
         self.lines_of_code += lines
