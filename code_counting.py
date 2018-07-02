@@ -1,24 +1,16 @@
 import os
 import time
 import sys
-
-FILE_EXTENSIONS = ['.java', '.py', '.c', '.cpp', '.h', '.js']
+from lang_controller import LanguagesController
+import logging
 
 files = []
 
 
-def check_if_file_is_of_extension(file):
-
-    for e in FILE_EXTENSIONS:
-        if e in file:
-            return True
-
-    return False
-
-
 def explore_folder(root):
 
-    if not os.path.isdir(root) and check_if_file_is_of_extension(root):
+    if not os.path.isdir(root):
+        logging.info('\tAdd', root, 'to files list')
         files.append(root)
 
     if os.path.isdir(root):
@@ -29,31 +21,23 @@ def explore_folder(root):
     return files
 
 
-def count_lines_of_code(file):
-    count = 0
-
-    with open(file, encoding='ISO-8859-1') as f:
-        for line in file:
-            count += 1
-
-    return count
-
-
 def main(root):
-    start = time.time()
+    logging.info('Constructing LanguageController object')
+    controller = LanguagesController()
+    logging.info('Successfully constructed LanguageController object')
+    # start = time.time()
 
+    logging.info('Exploring', root, ':')
     explore_folder(root)
-
-    total = 0
+    logging.info('Exploring finished')
 
     for f in files:
-        total += count_lines_of_code(f)
+        controller.check(f)
 
-    print('There are {} lines of code in {} files. This took {} to process'.format(
-        total, len(files), time.time() - start
-    ))
+    print(controller.results())
 
 
 if __name__ == '__main__':
+    logging.info('Starting program!')
     root = sys.argv[1]
     main(root)
