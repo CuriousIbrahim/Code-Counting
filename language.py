@@ -4,6 +4,7 @@
 Language class, contains name of language as well as the language's extension. Example: Java .java; HTML .html
 """
 
+
 class Language:
 
     def __init__(self, name, extension):       # extension has to be a list
@@ -20,6 +21,7 @@ class Language:
 
 
 LANGUAGES_FILE = 'languages.txt'
+
 
 def get_languages():
 
@@ -50,8 +52,12 @@ def get_languages():
             data = parse(line)
 
             # Create new Language object
-            languages.append(Language(data[0], data[1]))
+            Language(data[0], data[1])
 
-    return languages
+            # For each extension, creates a tuple for the object. The languages list is then converted into a dictionary
+            # where each file extension acts as a key which is associated which its Language object as its value.
+            # Ex. {'.java': Java (Language Object), '.c' C/C++ (Language Object), '.cpp': C/C++ (Language Object), ...}
+            for ext in data[1]:
+                languages.append((ext, Language))
 
-
+    return dict(languages)
