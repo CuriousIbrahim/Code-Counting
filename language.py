@@ -9,6 +9,8 @@ class Language:
 
     def __init__(self, name, extension):       # extension has to be a list
         self.name = name
+        self.files = 0                      # Number of files that for this Language
+        self.lines_of_code = 0              # Lines of code for this Language
 
         for index, ext in enumerate(extension):
             if '.' not in ext:
@@ -18,6 +20,12 @@ class Language:
 
     def __str__(self):
         return 'NAME: {} EXTENSION: {}'.format(self.name, self.extension)
+
+    def add_file(self):
+        self.file += 1
+
+    def add_lines(self, lines):
+        self.lines_of_code += lines
 
 
 LANGUAGES_FILE = 'languages.txt'
