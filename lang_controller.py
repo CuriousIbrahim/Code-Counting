@@ -29,3 +29,11 @@ class LanguagesController:
         count = count_lines_of_code(file)
         self.used[ext].add_lines(count)
         self.used[ext].add_file()
+
+    def results(self):
+        result = ''
+
+        for l in self.used:
+            result += self.used[l] + '\n'
+
+        return result
