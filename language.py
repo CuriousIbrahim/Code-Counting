@@ -52,12 +52,12 @@ def get_languages():
             data = parse(line)
 
             # Create new Language object
-            Language(data[0], data[1])
+            lang = Language(data[0], data[1])
 
             # For each extension, creates a tuple for the object. The languages list is then converted into a dictionary
             # where each file extension acts as a key which is associated which its Language object as its value.
             # Ex. {'.java': Java (Language Object), '.c' C/C++ (Language Object), '.cpp': C/C++ (Language Object), ...}
             for ext in data[1]:
-                languages.append((ext, Language))
+                languages.append((ext, lang))
 
     return dict(languages)
