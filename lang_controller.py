@@ -47,3 +47,12 @@ class LanguagesController:
                 added.append(temp)
 
         return result
+
+    def total_lines(self):
+
+        total = 0
+
+        for l in self.used:
+            total += self.used[l].lines_of_code
+
+        return total
