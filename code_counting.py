@@ -37,7 +37,9 @@ def main(root):
 
     print(controller.results())
 
-    print('Time to process: {} seconds'.format(str(time.time() - start)))
+    print('{} seconds to process {} lines of code across {} files with an average of {} lines of code per '
+          'file'.format(str(time.time() - start), controller.total_lines(), controller.total_files(),
+                        (controller.total_lines() / controller.total_files())))
 
 
 if __name__ == '__main__':
