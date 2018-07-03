@@ -56,3 +56,12 @@ class LanguagesController:
             total += self.used[l].lines_of_code
 
         return total
+
+    def total_files(self):
+
+        total = 0
+
+        for l in self.used:
+            total += self.used[l].files
+
+        return total
