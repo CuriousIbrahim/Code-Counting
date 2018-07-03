@@ -36,7 +36,14 @@ class LanguagesController:
     def results(self):
         result = ''
 
+        added = []
+
         for l in self.used:
-            result += str(self.used[l]) + '\n'
+
+            temp = str(self.used[l])
+
+            if temp not in added:
+                result += temp + '\n'
+                added.append(temp)
 
         return result

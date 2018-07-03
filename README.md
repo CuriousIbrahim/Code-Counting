@@ -7,6 +7,6 @@ Code Counting, written in Python 3 will explore a given root directory and print
 
 ## Current Known Bugs
 
-- For C and C++ projects, Code Counting might print multiple lines for the language C and C++ and they all contain the 
+- ~~For C and C++ projects, Code Counting might print multiple lines for the language C and C++ and they all contain the 
 exact same amount of lines of code and number of files. They are the same object but tracking different file 
-extensions (.h, .cpp, .c, ...)
+extensions (.h, .cpp, .c, ...)~~ - Fixed on July 2, 2018
