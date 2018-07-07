@@ -1,4 +1,4 @@
-from language import Language, get_languages
+from language import get_languages
 from util import get_file_extension, count_lines_of_code
 import logging
 
