@@ -5,4 +5,4 @@ C/C++;c,cpp,h,cp
 Javascript;js
 HTML;html
 CSS;css
-C#;cp
+C#;cs

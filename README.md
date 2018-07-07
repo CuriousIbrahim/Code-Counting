@@ -14,7 +14,7 @@ Code Counting, written in Python 3 will explore a given root directory and print
 - Javascript
 - HTML
 - CSS
-- CP
+- C#
 
 ## Current Known Bugs
 
