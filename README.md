@@ -1,9 +1,20 @@
 # Code-Counting
 
 Code Counting, written in Python 3 will explore a given root directory and print out:
-* Number of files that were counted
-* Total lines of code
-* Total time to process
+* Each language that was detected, and for each language that was detected:
+    * THe lines of code
+    * Files 
+* And finally will state amount taken, total lines code, total files, and the average lines of code per file
+
+## Supported Languages
+
+- Java
+- Python 
+- C/C++
+- Javascript
+- HTML
+- CSS
+- CP
 
 ## Current Known Bugs
 
