@@ -6,6 +6,24 @@ Code Counting, written in Python 3 will explore a given root directory and print
     * Files 
 * And finally will state amount taken, total lines code, total files, and the average lines of code per file
 
+## Installation and Use
+
+Requirements:
+* Git
+* Python 3
+
+Git clone first:
+```buildoutcfg
+git clone https://github.com/CuriousIbrahim/Code-Counting
+```
+
+then to use:
+```buildoutcfg
+cd Code-Counting/
+python3 code-counting <directory of your choice>
+```
+
+
 ## Supported Languages
 
 - Java
