@@ -44,5 +44,13 @@ def main(root):
 
 if __name__ == '__main__':
     logging.info('Starting program!')
-    root = sys.argv[1]
+
+    root = ''
+
+    for index, item in enumerate(sys.argv[1:]):
+        if index != (len(sys.argv) - 2):
+            root += item + ' '
+        else:
+            root += item
+
     main(root)
