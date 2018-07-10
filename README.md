@@ -11,9 +11,6 @@ Code Counting, written in Python 3 will explore a given root directory and will:
     3. Total files (this only includes the detected languages)
     4. An average lines of code per file 
 
-
-* Each language that was detected, and for each language that was detected
-
 ## Installation and Use
 
 Requirements:
