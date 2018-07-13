@@ -9,6 +9,10 @@ class LanguagesController:
         self.languages = get_languages()
         self.used = {}
 
+
+    def get_used_language(self, lang):
+        return self.used[lang]
+
     """If the file is of an extension (ex: .java, .py), it will add it to the a separate dictionary and start counting 
     its lines"""
 
