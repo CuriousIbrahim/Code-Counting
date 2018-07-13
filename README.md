@@ -53,8 +53,7 @@ Language: CSS. 7855 lines of code in 66 files
 - CSS
 - C#
 
-## Current Known Bugs
+## Interesting Behaviour
 
-- ~~For C and C++ projects, Code Counting might print multiple lines for the language C and C++ and they all contain the 
-exact same amount of lines of code and number of files. They are the same object but tracking different file 
-extensions (.h, .cpp, .c, ...)~~ - Fixed on July 2, 2018
+Code-Counting does not count any lines after the last line in a file. Even if there is space after the last line 
+in a text editor, Code-Counting will not read it. This was discovered through the unit tests.
