@@ -65,6 +65,17 @@ def test_the_test_code_dir_line_count():
     assert lang_controller.total_lines() == TEST_CODE_DIR_LINE_COUNT
 
 
+def test_the_test_code_dir_file_count():
+    lang_controller = LanguagesController()
+
+    files = explore_folder(TEST_CODE_DIR, [])
+
+    for file in files:
+        lang_controller.check(file)
+
+    assert lang_controller.total_files() == 4
+
+
 
 
 
