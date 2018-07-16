@@ -1,8 +1,48 @@
 NAME;EXTENSIONS (DON'T INCLUDE PERIOD)
 Java;java
 Python;py
-C/C++;c,cpp,h,cp
-Javascript;js
+C/C++/Objective-C;c,cpp,h,cp,m
+JavaScript;js
 HTML;html
 CSS;css
 C#;cs
+Ruby;rb
+Shell;sh
+Groovy;groovy
+XML;xml
+JSON;json
+Markdown;md
+Scala;scala
+Perl;perl
+PHP;php
+Swift;swift
+TypesScript;ts
+YAML;yaml,yml
+Text;txt
+Go;go
+Clojure;cljs
+Rust;rs
+Assembly;asm
+Kotlin;kt
+Batch File;bat
+Gradle;gradle
+INI;properties
+Emacs Lisp;el
+TeX;tex
+Visual Basic;vb
+Basic;bas
+Factor;factor
+ChucK; ck
+SQL;sql
+Elixir;ex,exs
+Haskell;hs
+Haxe;hx
+Dart;dart
+Jupyter Notebook;ipynb
+Mathematica;nb
+Unix Assembly;s
+R;r
+Lua;lua
+SCSS;scss
+Sass;sass
+Less;less

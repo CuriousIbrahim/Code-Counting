@@ -65,16 +65,6 @@ Language: CSS. 28324 lines of code in 68 files
 ```
 
 
-## Supported Languages
-
-- Java
-- Python 
-- C/C++
-- Javascript
-- HTML
-- CSS
-- C#
-
 ## Interesting Behaviour
 
 Code-Counting does not count any lines after the last line in a file. Even if there is space after the last line 
@@ -90,3 +80,53 @@ in a text editor, Code-Counting will not read it. This was discovered through th
     - ~~CSS~~
     - C/C++
     - C#
+
+## Supported Languages to Detect
+
+- Java
+- Python 
+- C/C++/Objective-C
+- Javascript
+- HTML
+- CSS
+- C#
+- Ruby
+- Shell
+- Groovy
+- XML
+- JSON
+- Markdown
+- Scala
+- Perl
+- PHP
+- Swift
+- TypeScript
+- YAML
+- Text
+- Go
+- Clojure
+- Rust
+- Assembly
+- Kotlin
+- Gradle
+- INI
+- Emacs
+- INI
+- Emacs Lisp
+- TeX
+- Visual Basic
+- Basic
+- Factor
+- ChucK
+- SQL
+- Elixir
+- Haskell
+- Haxe
+- Dart
+- Jupyter Notebook
+- Mathematica
+- R
+- Lua
+- SCSS
+- Sass
+- Less
