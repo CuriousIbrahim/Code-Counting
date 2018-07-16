@@ -2,8 +2,8 @@ import time
 import sys
 import logging
 
-from lang_controller import LanguagesController
-from util import explore_folder
+from code_counting.lang_controller import LanguagesController
+from code_counting.util import explore_folder
 
 
 def main(root):

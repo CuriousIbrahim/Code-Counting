@@ -1,5 +1,5 @@
-from language import get_languages
-from util import get_file_extension, count_lines_of_code
+from code_counting.language import get_languages
+from code_counting.util import get_file_extension, count_lines_of_code
 import logging
 
 
