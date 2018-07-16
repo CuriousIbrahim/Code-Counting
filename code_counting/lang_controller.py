@@ -46,9 +46,9 @@ class LanguagesController:
 
             temp = str(self.used[l])
 
-            if temp not in added:
+            if self.used[l].name not in added:
                 result += temp + '\n'
-                added.append(temp)
+                added.append(self.used[l].name)
 
         return result
 
