@@ -28,6 +28,21 @@ cd Code-Counting/
 python3 code-counting <directory of your choice>
 ```
 
+### Running tests
+
+Requirement(s):
+- [pytest](https://github.com/pytest-dev/pytest)
+
+To install pytest, run the following command:
+```buildoutcfg
+pip3 install pytest
+```
+
+To run the written tests, run the following command:
+```buildoutcfg
+pytest unit-tests.py
+```
+
 ## Example
 
 ```buildoutcfg
