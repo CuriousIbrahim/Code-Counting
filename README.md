@@ -25,7 +25,7 @@ git clone https://github.com/CuriousIbrahim/Code-Counting
 then to use:
 ```buildoutcfg
 cd Code-Counting/
-python3 code-counting <directory of your choice>
+python3 code_counting <directory of your choice>
 ```
 
 ### Running tests
