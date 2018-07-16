@@ -57,3 +57,14 @@ Language: CSS. 28307 lines of code in 67 files
 
 Code-Counting does not count any lines after the last line in a file. Even if there is space after the last line 
 in a text editor, Code-Counting will not read it. This was discovered through the unit tests.
+
+## Todo 
+
+- Switch to pytest for unit testing
+- Add test that goes through every file in 'test-code' directory
+- Make test code files for the following languages:
+    - Javascript
+    - HTML
+    - CSS
+    - C/C++
+    - C#
