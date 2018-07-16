@@ -38,10 +38,10 @@ def main(root):
 
     if controller.total_files() != 0:
         print('{} seconds to process {} lines of code across {} files with an average of {} lines of code per '
-              'file'.format(str(time.time() - start), controller.total_lines(), controller.total_files(),
-                            (controller.total_lines() / controller.total_files())))
+              'file'.format(round(time.time() - start, 3), controller.total_lines(), controller.total_files(),
+                            (round(controller.total_lines() / controller.total_files(), 2))))
     else:
-        print('{} seconds to process {} lines of code across {} files.'.format(str(time.time() - start), controller.total_lines(), controller.total_files()))
+        print('{} seconds to process {} lines of code across {} files.'.format(round(time.time() - start, 3), controller.total_lines(), controller.total_files()))
 
 
 if __name__ == '__main__':
