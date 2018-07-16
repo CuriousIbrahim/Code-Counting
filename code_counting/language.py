@@ -28,6 +28,7 @@ class Language:
     def add_lines(self, lines):
         self.lines_of_code += lines
 
+
 CURRENT_PATH = os.path.dirname(os.path.realpath(__file__))
 
 LANGUAGES_FILE = os.path.join(CURRENT_PATH, 'languages.txt')

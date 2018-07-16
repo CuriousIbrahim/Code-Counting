@@ -12,19 +12,27 @@ from code_counting.lang_controller import LanguagesController
 from code_counting.util import explore_folder
 
 
+logging.getLogger().setLevel(logging.INFO)
+
+
 def main(root):
-    logging.info('Constructing LanguageController object')
+    logging.debug('Constructing LanguageController object')
     controller = LanguagesController()
-    logging.info('Successfully constructed LanguageController object')
+    logging.debug('Successfully constructed LanguageController object')
 
     start = time.time()
 
-    logging.info('Exploring', root, ':')
+    logging.info('Exploring {}'.format(root))
     files = explore_folder(root, [])
     logging.info('Exploring finished')
 
+
+    logging.info('Checking {} files'.format(len(files)))
+
     for f in files:
         controller.check(f)
+
+    print('\n==============================================\n')
 
     print(controller.results())
 

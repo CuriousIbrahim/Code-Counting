@@ -18,15 +18,14 @@ class LanguagesController:
 
     def check(self, file):
 
-        logging.info('Checking', file)
-
         ext = get_file_extension(file)
-        logging.info('\t', file, 'is of', ext, 'extension')
+        if ext in self.languages:
+            logging.debug('\t{} is of {} extension'.format(file, ext))
         if ext in self.used:
-            logging.info('\t', file, 'is already in used')
+            logging.debug('\t{} is already in used'.format(file))
             self._add_file_and_count_lines(file, ext)
         elif ext in self.languages:
-            logging.info('\t', file, 'is not in used, adding it')
+            logging.debug('\t{} is not in used, adding it'.format(file))
             lang = self.languages[ext]
             self.used[ext] = lang
             self._add_file_and_count_lines(file, ext)

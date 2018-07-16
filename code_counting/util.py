@@ -17,13 +17,15 @@ def count_lines_of_code(file):
         for line in f:
             count += 1
 
+    logging.debug('{} contains {} lines of code'.format(file, count))
+
     return count
 
 
 def explore_folder(root, files):
 
     if not os.path.isdir(root):
-        logging.info('\tAdd', root, 'to files list')
+        # logging.info('\tAdd', root, 'to files list')
         files.append(root)
 
     if os.path.isdir(root):
