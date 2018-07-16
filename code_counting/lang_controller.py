@@ -21,6 +21,7 @@ class LanguagesController:
         ext = get_file_extension(file)
         if ext in self.languages:
             logging.debug('\t{} is of {} extension'.format(file, ext))
+
         if ext in self.used:
             logging.debug('\t{} is already in used'.format(file))
             self._add_file_and_count_lines(file, ext)
@@ -29,6 +30,8 @@ class LanguagesController:
             lang = self.languages[ext]
             self.used[ext] = lang
             self._add_file_and_count_lines(file, ext)
+        else:
+            logging.debug('/t{} is not any of the known extensions'.format(file))
 
     def _add_file_and_count_lines(self, file, ext):
 
