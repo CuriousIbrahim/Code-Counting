@@ -60,7 +60,7 @@ in a text editor, Code-Counting will not read it. This was discovered through th
 
 ## Todo 
 
-- Switch to pytest for unit testing
+- ~~Switch to pytest for unit testing~~
 - Add test that goes through every file in 'test-code' directory
 - Make test code files for the following languages:
     - Javascript
