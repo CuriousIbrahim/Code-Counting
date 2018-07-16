@@ -1,6 +1,7 @@
 from code_counting.language import get_languages
 from code_counting.util import get_file_extension, count_lines_of_code
 import logging
+import os
 
 
 class LanguagesController:
@@ -11,7 +12,9 @@ class LanguagesController:
 
 
     def get_used_language(self, lang):
-        return self.used[lang]
+        if lang in self.used:
+            return self.used[lang]
+        return None
 
     """If the file is of an extension (ex: .java, .py), it will add it to the a separate dictionary and start counting 
     its lines"""
@@ -34,10 +37,10 @@ class LanguagesController:
             logging.debug('/t{} is not any of the known extensions'.format(file))
 
     def _add_file_and_count_lines(self, file, ext):
-
-        count = count_lines_of_code(file)
-        self.used[ext].add_lines(count)
-        self.used[ext].add_file()
+        if os.path.isfile(file):
+            count = count_lines_of_code(file)
+            self.used[ext].add_lines(count)
+            self.used[ext].add_file()
 
     def results(self):
         result = ''
