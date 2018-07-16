@@ -40,7 +40,7 @@ pip3 install pytest
 
 To run the written tests, run the following command:
 ```buildoutcfg
-pytest unit-tests.py
+py.test
 ```
 
 ## Example
