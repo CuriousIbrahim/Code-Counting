@@ -50,18 +50,18 @@ Ibrahims-MacBook-Pro:Code-Counting Ibrahim$ python3 code_counting /Users/Ibrahim
 INFO:root:Starting program!
 INFO:root:Exploring /Users/Ibrahim/Documents/My Documents/Projects/
 INFO:root:Exploring finished
-INFO:root:Checking 62507 files
+INFO:root:Checking 62514 files
 
 ==============================================
 
-Language: Python. 5293 lines of code in 139 files
+Language: Python. 5301 lines of code in 139 files
 Language: HTML. 77093 lines of code in 311 files
 Language: Java. 7468 lines of code in 90 files
 Language: Javascript. 4416738 lines of code in 35601 files
 Language: C/C++. 22130 lines of code in 65 files
 Language: CSS. 28324 lines of code in 68 files
 
-12.991 seconds to process 4579176 lines of code across 36339 files with an average of 126.01 lines of code per file
+13.414 seconds to process 4557054 lines of code across 36274 files with an average of 125.63 lines of code per file
 ```
 
 
