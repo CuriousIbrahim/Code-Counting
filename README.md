@@ -1,6 +1,6 @@
 # Code-Counting
 
-Code Counting, written in Python 3 will explore a given root directory and will:
+Code Counting, written in Python 3 will explore a given directory and will:
 1. Detect the languages in the given directory (ex. Java, HTML, Python, etc.)
 2. For each detected language, will:
     1. Print lines of code
@@ -46,15 +46,22 @@ py.test
 ## Example
 
 ```buildoutcfg
-Ibrahims-MacBook-Pro:Code-Counting Ibrahim$ python3 code-counting.py /Users/Ibrahim/Documents/My\ Documents/Projects/
-Language: Python. 5179 lines of code in 134 files
-Language: HTML. 77064 lines of code in 310 files
-Language: Java. 7158 lines of code in 86 files
-Language: Javascript. 4412072 lines of code in 35544 files
-Language: C/C++. 22130 lines of code in 65 files
-Language: CSS. 28307 lines of code in 67 files
+Ibrahims-MacBook-Pro:Code-Counting Ibrahim$ python3 code_counting /Users/Ibrahim/Documents/My\ Documents/Projects/
+INFO:root:Starting program!
+INFO:root:Exploring /Users/Ibrahim/Documents/My Documents/Projects/
+INFO:root:Exploring finished
+INFO:root:Checking 62500 files
 
-21.298703908920288 seconds to process 4574040 lines of code across 36271 files with an average of 126.10735849576797 lines of code per file
+==============================================
+
+Language: Python. 5293 lines of code in 139 files
+Language: HTML. 77093 lines of code in 311 files
+Language: Java. 7468 lines of code in 90 files
+Language: Javascript. 4416738 lines of code in 35601 files
+Language: C/C++. 22130 lines of code in 65 files
+Language: CSS. 28324 lines of code in 68 files
+
+14.826189279556274 seconds to process 4579176 lines of code across 36339 files with an average of 126.01271361347312 lines of code per file
 ```
 
 
