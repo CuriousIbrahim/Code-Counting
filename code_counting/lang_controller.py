@@ -61,8 +61,12 @@ class LanguagesController:
 
         total = 0
 
+        added = []
+
         for l in self.used:
-            total += self.used[l].lines_of_code
+            if self.used[l].name not in added:
+                total += self.used[l].lines_of_code
+                added.append(self.used[l].name)
 
         return total
 
@@ -70,7 +74,11 @@ class LanguagesController:
 
         total = 0
 
+        added = []
+
         for l in self.used:
-            total += self.used[l].files
+            if self.used[l].name not in added:
+                total += self.used[l].files
+                added.append(self.used[l].name)
 
         return total
