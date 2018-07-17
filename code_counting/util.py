@@ -25,11 +25,13 @@ def count_lines_of_code(file):
 def explore_folder(root, files):
 
     if not os.path.isdir(root):
-        # logging.info('\tAdd', root, 'to files list')
+        logging.debug('\tAdd {} to files list'.format(root))
         files.append(root)
 
     if os.path.isdir(root):
+        logging.debug('\t{} is a dir, expanding:'.format(root))
         for f in os.listdir(root):
+            logging.debug('\tExploring {}'.format(f))
             explore_folder(os.path.join(root, f), files)
 
     return files
