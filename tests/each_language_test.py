@@ -1,6 +1,5 @@
-from .constants import *
-
 from code_counting.lang_controller import LanguagesController
+from .constants import *
 
 
 def get_line_count(file, language_extension):
@@ -16,25 +15,20 @@ def get_line_count(file, language_extension):
 
 
 def test_java_line_count():
-
     assert get_line_count(JAVA_FILE, '.java') == JAVA_LINE_COUNT
 
 
 def test_python_line_count():
-
     assert get_line_count(PYTHON_FILE, '.py') == PYTHON_LINE_COUNT
 
 
 def test_html_line_count():
-
     assert get_line_count(HTML_FILE, '.html') == HTML_LINE_COUNT
 
 
 def test_css_line_count():
-
     assert get_line_count(CSS_FILE, '.css') == CSS_LINE_COUNT
 
 
 def test_javascript_line_count():
-
     assert get_line_count(JAVASCRIPT_FILE, '.js') == JAVASCRIPT_FILE_COUNT

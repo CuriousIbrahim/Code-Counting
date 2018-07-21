@@ -10,7 +10,6 @@ class LanguagesController:
         self.languages = get_languages()
         self.used = {}
 
-
     def get_used_language(self, lang):
         if lang in self.used:
             return self.used[lang]

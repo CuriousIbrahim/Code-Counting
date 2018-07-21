@@ -11,7 +11,6 @@ sys.path.append(CURRENT_PATH)
 from code_counting.lang_controller import LanguagesController
 from code_counting.util import explore_folder
 
-
 logging.getLogger().setLevel(logging.INFO)
 
 
@@ -25,7 +24,6 @@ def main(root):
     logging.info('Exploring {}'.format(root))
     files = explore_folder(root, [])
     logging.info('Exploring finished')
-
 
     logging.info('Checking {} files'.format(len(files)))
 
@@ -41,7 +39,9 @@ def main(root):
               'file'.format(round(time.time() - start, 3), controller.total_lines(), controller.total_files(),
                             (round(controller.total_lines() / controller.total_files(), 2))))
     else:
-        print('{} seconds to process {} lines of code across {} files.'.format(round(time.time() - start, 3), controller.total_lines(), controller.total_files()))
+        print('{} seconds to process {} lines of code across {} files.'.format(round(time.time() - start, 3),
+                                                                               controller.total_lines(),
+                                                                               controller.total_files()))
 
 
 if __name__ == '__main__':

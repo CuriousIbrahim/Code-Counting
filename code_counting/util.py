@@ -14,7 +14,7 @@ def count_lines_of_code(file):
     count = 0
 
     with open(file, encoding='ISO-8859-1') as f:
-        for line in f:
+        for _ in f:
             count += 1
 
     logging.debug('{} contains {} lines of code'.format(file, count))
