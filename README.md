@@ -91,7 +91,7 @@ in a text editor, Code-Counting will not read it. This was discovered through th
 - ~~Switch to pytest for unit testing~~
 - ~~Add test that goes through every file in 'test-code' directory~~
 - Make test code files and tests for the following languages:
-    - Javascript
+    - ~~Javascript~~
     - ~~HTML~~
     - ~~CSS~~
     - C/C++

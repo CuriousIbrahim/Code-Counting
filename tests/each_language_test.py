@@ -33,3 +33,8 @@ def test_html_line_count():
 def test_css_line_count():
 
     assert get_line_count(CSS_FILE, '.css') == CSS_LINE_COUNT
+
+
+def test_javascript_line_count():
+
+    assert get_line_count(JAVASCRIPT_FILE, '.js') == JAVASCRIPT_FILE_COUNT

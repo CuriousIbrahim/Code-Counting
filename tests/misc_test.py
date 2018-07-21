@@ -1,6 +1,6 @@
 import os
 
-from .constants import CURRENT_PATH, TEST_CODE_DIR, TEST_CODE_DIR_LINE_COUNT
+from .constants import CURRENT_PATH, TEST_CODE_DIR, TEST_CODE_DIR_LINE_COUNT, TEST_CODE_DIR_FILE_COUNT
 
 from code_counting.lang_controller import LanguagesController
 from code_counting.util import explore_folder
@@ -30,4 +30,4 @@ def test_the_test_code_dir_file_count():
     for file in files:
         lang_controller.check(file)
 
-    assert lang_controller.total_files() == 4
+    assert lang_controller.total_files() == TEST_CODE_DIR_FILE_COUNT
