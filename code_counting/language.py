@@ -20,7 +20,19 @@ class Language:
         self.extension = extension
 
     def __str__(self):
-        return 'Language: {}. {} lines of code in {} files'.format(self.name, self.lines_of_code, self.files)
+        to_return = 'Language: {}, {} line'.format(self.name, self.lines_of_code)
+
+        if self.lines_of_code > 1:
+            to_return += 's of code in '
+        else:
+            to_return += ' of code in '
+
+        if self.files > 1:
+            to_return += '{} files'.format(self.files)
+        else:
+            to_return += '{} file'.format(self.files)
+
+        return to_return
 
     def add_file(self):
         self.files += 1
