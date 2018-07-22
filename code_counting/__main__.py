@@ -3,13 +3,13 @@ import sys
 import logging
 import os
 
+from code_counting.lang_controller import LanguagesController
+from code_counting.util import explore_folder
+
 # Yea, I don't know either. If I don't do it, python starts informing me that lang_controller is not a module
 CURRENT_PATH = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
 
 sys.path.append(CURRENT_PATH)
-
-from code_counting.lang_controller import LanguagesController
-from code_counting.util import explore_folder
 
 logging.getLogger().setLevel(logging.INFO)
 
