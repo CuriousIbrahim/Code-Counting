@@ -49,10 +49,28 @@ if __name__ == '__main__':
 
     root = ''
 
+    debug = False
+
+    # save_debug_log = ''
+
     for index, item in enumerate(sys.argv[1:]):
         if index != (len(sys.argv) - 2):
             root += item + ' '
+        if '-d' is item:
+            debug = True
+            # if index+1 < len(sys.argv[1:]):
+            #     save_debug_log = sys.argv[index+1]
         else:
             root += item
+
+    if debug:
+        logging.getLogger().setLevel(logging.DEBUG)
+    else:
+        logging.basicConfig(filename='log.txt',
+                            filemode='a',
+                            format='%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s',
+                            datefmt='%H:%M:%S',
+                            level=logging.DEBUG)
+        logging.getLogger('Code-Counting')
 
     main(root)
