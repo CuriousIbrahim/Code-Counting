@@ -24,14 +24,19 @@ def count_lines_of_code(file):
 
 def explore_folder(root, files):
 
+    # If root is not a folder, add it to the files list
+    # Base case
     if not os.path.isdir(root):
         logging.debug('\tAdd {} to files list'.format(root))
         files.append(root)
+        return files
 
-    if os.path.isdir(root):
+    # If root is a folder, explore the folder and call itself (explore_folder function)
+    # Recursive case
+    elif os.path.isdir(root):
         logging.debug('\t{} is a dir, expanding:'.format(root))
         for f in os.listdir(root):
             logging.debug('\tExploring {}'.format(f))
             explore_folder(os.path.join(root, f), files)
 
-    return files
+        return files
