@@ -11,7 +11,7 @@ sys.path.append(CURRENT_PATH)
 from code_counting.lang_controller import LanguagesController
 from code_counting.util import explore_folder
 
-logging.getLogger().setLevel(logging.INFO)
+# logging.getLogger().setLevel(logging.INFO)
 
 
 def main(root):
@@ -53,24 +53,31 @@ if __name__ == '__main__':
 
     # save_debug_log = ''
 
-    for index, item in enumerate(sys.argv[1:]):
-        if index != (len(sys.argv) - 2):
-            root += item + ' '
-        if '-d' is item:
+    root = sys.argv[1]
+
+    try:
+        if sys.argv[2] == '-d':
             debug = True
-            # if index+1 < len(sys.argv[1:]):
-            #     save_debug_log = sys.argv[index+1]
-        else:
-            root += item
+    except:
+        None
+
+
+
+    # for index, item in enumerate(sys.argv[1:]):
+    #     if index != (len(sys.argv) - 2):
+    #         root += item + ' '
+    #     if '-d' is item:
+    #         debug = True
+    #         # if index+1 < len(sys.argv[1:]):
+    #         #     save_debug_log = sys.argv[index+1]
+    #     else:
+    #         root += item
 
     if debug:
-        logging.getLogger().setLevel(logging.DEBUG)
+        logging.basicConfig(filename='code-counting.log', filemode='w', level=logging.DEBUG)
+        logging.getLogger().debug('Debug mode ON')
     else:
-        logging.basicConfig(filename='log.txt',
-                            filemode='a',
-                            format='%(asctime)s,%(msecs)d %(name)s %(levelname)s %(message)s',
-                            datefmt='%H:%M:%S',
-                            level=logging.DEBUG)
-        logging.getLogger('Code-Counting')
+        logging.getLogger().setLevel(logging.INFO)
+
 
     main(root)
