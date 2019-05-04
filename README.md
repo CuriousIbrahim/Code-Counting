@@ -95,6 +95,7 @@ in a text editor, Code-Counting will not read it. This was discovered through th
     - ~~CSS~~
     - C/C++
     - C#
+- Add functionality to allow user to ignore specific directories and files
 
 ## Supported Languages to Detect
 
