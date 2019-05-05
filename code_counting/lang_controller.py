@@ -33,7 +33,8 @@ class LanguagesController:
             self.used[ext] = lang
             self._add_file_and_count_lines(file, ext)
         else:
-            logging.debug('/t{} is not any of the known extensions'.format(file))
+            logging.debug(
+                '/t{} is not any of the known extensions'.format(file))
 
     def _add_file_and_count_lines(self, file, ext):
         if os.path.isfile(file):

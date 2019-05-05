@@ -51,8 +51,6 @@ if __name__ == '__main__':
 
     debug = False
 
-    # save_debug_log = ''
-
     root = sys.argv[1]
 
     try:
@@ -62,22 +60,11 @@ if __name__ == '__main__':
         None
 
 
-
-    # for index, item in enumerate(sys.argv[1:]):
-    #     if index != (len(sys.argv) - 2):
-    #         root += item + ' '
-    #     if '-d' is item:
-    #         debug = True
-    #         # if index+1 < len(sys.argv[1:]):
-    #         #     save_debug_log = sys.argv[index+1]
-    #     else:
-    #         root += item
-
     if debug:
-        logging.basicConfig(filename='code-counting.log', filemode='w', level=logging.DEBUG)
+        logging.basicConfig(filename='code-counting.log',
+                            filemode='w', level=logging.DEBUG)
         logging.getLogger().debug('Debug mode ON')
     else:
         logging.getLogger().setLevel(logging.INFO)
-
 
     main(root)
