@@ -16,13 +16,11 @@ def parse(argv):
     for v in argv:
 
         if '-d' == v:
-            print('-d triggered')
             temp = ''.join(buffer)
             result['dir'] = temp
             buffer.clear()
 
         elif '-i' == v:
-            print('-i triggered')
             result['ignore'] += buffer
             buffer.clear()
 
@@ -32,8 +30,6 @@ def parse(argv):
 
         else:
             buffer.append(v)
-
-        print(v, buffer, result)
 
     return result
 
