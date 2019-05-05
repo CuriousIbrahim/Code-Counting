@@ -10,11 +10,12 @@ sys.path.append(CURRENT_PATH)
 
 from code_counting.lang_controller import LanguagesController
 from code_counting.util import explore_folder
+import parser
 
 # logging.getLogger().setLevel(logging.INFO)
 
 
-def main(root):
+def main(root, ignore=None, only=None):
     logging.debug('Constructing LanguageController object')
     controller = LanguagesController()
     logging.debug('Successfully constructed LanguageController object')
@@ -51,14 +52,13 @@ if __name__ == '__main__':
 
     debug = False
 
-    root = sys.argv[1]
+    args = parser.parse(sys.argv)
 
-    try:
-        if sys.argv[2] == '-d':
-            debug = True
-    except:
-        None
-
+    # try:
+    #     if sys.argv[2] == '-d':
+    #         debug = True
+    # except:
+    #     None
 
     if debug:
         logging.basicConfig(filename='code-counting.log',
@@ -67,4 +67,4 @@ if __name__ == '__main__':
     else:
         logging.getLogger().setLevel(logging.INFO)
 
-    main(root)
+    main(args['dir'])
